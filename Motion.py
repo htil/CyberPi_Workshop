@@ -1,7 +1,7 @@
 import cyberpi
 import time
 
-motion_threshold = 2  
+motion_threshold = 3.0  
 
 while True:
     motion_value = cyberpi.pocket.read_analog("s2")  
