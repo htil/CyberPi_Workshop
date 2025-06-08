@@ -3,17 +3,19 @@ from cypi import write_csv, get_time
 
 # Define your column headers
 data = [
-    ["Label", "Shake_Value"],
+    ["Index", "Label", "Shake_Value"],
 ]
 
-label = "running"
+label = "sitting"
 num_of_samples = 50
-
+index = 0
+cyberpi.console.println("Starting program.")
 while len(data) < num_of_samples:
     val = cyberpi.get_shakeval()
-    data.append([label, val])
+    data.append([index, label, val])
     cyberpi.console.println(label + " " + str(val))
+    index += 1
 
-filename = get_time() + "_" + "data10.csv"
+filename = "shake.csv"
 write_csv(data, filename)
 cyberpi.console.println("Data saved.")
