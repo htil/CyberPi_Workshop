@@ -2,7 +2,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-file_name = "data4.csv"
+file_name = "shake.csv"
 df = pd.read_csv(file_name)
 
 sns.barplot(x = 'Label',
