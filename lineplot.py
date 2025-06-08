@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Load the data from the CSV file
-file_name = "enter_file_name.csv"
+file_name = "shake.csv"
 df = pd.read_csv(file_name)
 
 # Plotting the line graph
